@@ -1,0 +1,39 @@
+<!--
+  # EXERCISE FIVE
+-->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Exercise five</title>
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" 
+            crossorigin="anonymous"></script>
+        <script type="text/javascript">
+            function setup() {
+                let elements = document.querySelectorAll(".remove");
+
+                for (let i = 0; i < elements.length; i++) {
+                    let index = elements[i];
+
+                    index.addEventListener("click", function () {
+                        index.closest("div").remove();
+                    })
+                }
+            }
+            $(document).ready(function () {
+                setup();
+            });
+        </script>
+    </head>
+    <body>
+        <div class="image">
+            <img src="one.png" alt="First">
+            <button class="remove">X</button>
+        </div>
+        <div class="image">
+            <img src="two.png" alt="Second">
+            <button class="remove">X</button>
+        </div>
+    </body>
+</html>
